@@ -1,0 +1,41 @@
+{
+    "name": "rulweb/laravel-notify",
+    "description": "Реализация PNotify для Laravel 5.5.x",
+    "license": "MIT",
+    "keywords": ["laravel", "notify", "pnotify", "rulweb"],
+    "authors": [
+        {
+            "name": "RuleZzz",
+            "email": "rul22rus@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/contracts": "5.5.*",
+        "illuminate/session": "5.5.*",
+        "illuminate/support": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RulWeb\\Swal\\": "src/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "RulWeb\\Notify\\ServiceProvider"
+            ],
+            "aliases": {
+                "Swal": "RulWeb\\Notify\\Facades\\Notify"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
