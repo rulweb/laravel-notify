@@ -1,4 +1,4 @@
-# Реализация PNotify для Laravel 5.5.x
+# Реализация NotifyJs для Laravel 5.5.x
 
 [![Latest Version](https://img.shields.io/github/release/rulweb/laravel-notify.svg?style=flat)](https://github.com/rulweb/laravel-notify/releases)
 [![License](https://img.shields.io/packagist/l/rulweb/laravel-notify.svg?style=flat)](https://packagist.org/packages/rulweb/laravel-notify)
@@ -16,8 +16,14 @@ $ composer require rulweb/laravel-notify
 В шаблоне перед тегами `</body></html>` добавить:
 
 ```blade
-@if (session()->has('notify'))
-<script>notify({!! session()->get('notify') !!})</script>
+@if (session()->has('notify.title'))
+    <script>
+        $.notify({
+            title: '{{ session()->get('notify.title') }}',
+            text: '{{ session()->get('notify.text') }}',
+            image: '{{ session()->get('notify.image') }}'
+        }, {!! session()->get('notify.title') !!})
+    </script>
 @endif
 ```
 
