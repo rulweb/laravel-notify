@@ -39,7 +39,7 @@ use RulWeb\Notify\Facades\Notify;
 Notify::error($title, $message);
 
 // Более гибкий вариант
-Notify::type('error')->title('Ошибка')->html('Время действия прошлого <strong>ключа подтверждения</strong> ещё не истекло');
+Notify::type('error')->title('Ошибка')->text('Время действия прошлого <strong>ключа подтверждения</strong> ещё не истекло');
 ```
 
 Использование хелперов
