@@ -1,8 +1,8 @@
 {
     "name": "rulweb/laravel-notify",
-    "description": "Реализация PNotify для Laravel 5.5.x",
+    "description": "Реализация NotifyJs для Laravel 5.5.x",
     "license": "MIT",
-    "keywords": ["laravel", "notify", "pnotify", "rulweb"],
+    "keywords": ["laravel", "notify", "notifyjs", "rulweb"],
     "authors": [
         {
             "name": "RuleZzz",
